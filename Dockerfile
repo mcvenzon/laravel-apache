@@ -12,6 +12,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Enable Apache mod_rewrite for URL rewriting
 RUN a2enmod rewrite
 
+#Copy custom Apache mod_rewrite
+COPY apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql zip
 
