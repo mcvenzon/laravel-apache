@@ -1,9 +1,8 @@
 services:
   web:
-    image: laravel-apache-app
     build:
-      target: web
       context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:80"
     volumes:
