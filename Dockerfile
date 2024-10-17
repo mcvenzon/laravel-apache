@@ -13,7 +13,7 @@ COPY apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 WORKDIR /var/www/html
 
 # Copy the Laravel application files
-COPY . /var/www/html
+COPY . .
 
 # Install PHP extensions required by Laravel
 RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev && \
