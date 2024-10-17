@@ -4,8 +4,6 @@ FROM php:8.2-apache
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-RUN a2enmod php
-
 # Copy custom Apache configuration
 COPY apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 
